@@ -1,0 +1,97 @@
+.header {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 50;
+  background-color: #ffffff;
+}
+
+.logo {
+  color: #7261ff;
+  z-index: 60;
+}
+
+.mobileMenuButton {
+  display: none;
+}
+
+.menuToggle {
+  color: #4a5568;
+  z-index: 60;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navLink {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #4a5568;
+}
+
+.tryFreeButton {
+  background-color: #7261ff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.overlay {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .mobileMenuButton {
+    display: block;
+    z-index: 60;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 80%;
+    max-width: 300px;
+    background-color: white;
+    transition: right 0.3s ease-in-out;
+    padding: 4rem 1rem 1rem;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 55;
+  }
+
+  .nav.open {
+    right: 0;
+  }
+
+  .navLink,
+  .tryFreeButton {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+  }
+}

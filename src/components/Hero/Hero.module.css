@@ -1,0 +1,239 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+  background-image: url('/images/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Remove or comment out the .backgroundImage class if it's not being used */
+/* 
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/images/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  opacity: 0.1;
+}
+*/
+
+.content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #1E293B;
+  letter-spacing: -0.02em;
+}
+
+.content p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: #64748B;
+  font-weight: 400;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.leftImage,
+.rightImage {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.leftImage {
+  z-index: 2;
+}
+
+.rightImage {
+  position: absolute;
+  right: -20%;
+  z-index: 1;
+}
+
+.cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tryFreeButton {
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.tryFreeButton {
+  background-color: #7261FF;
+  color: white;
+  border: none;
+}
+
+.tryFreeButton:hover {
+  background-color: #5A4DE6;
+}
+
+.watchDemoLink {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.watchDemoText {
+  color: #7261FF;
+  margin-right: 0.5rem;
+}
+
+.watchDemoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7261FF;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.watchDemoIcon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.watchDemoLink:hover {
+  background-color: rgba(114, 97, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content p {
+    font-size: 1.125rem;
+  }
+
+  .imageContainer {
+    width: 100%;
+  }
+
+  .rightImage {
+    right: -10%;
+  }
+}
+
+.title {
+  /* existing styles */
+}
+
+.subtitle {
+  /* existing styles */
+}
+
+.ctaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.tryFreeButton {
+  /* existing styles */
+  margin-right: 1rem;
+}
+
+.watchDemoLink {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.watchDemoText {
+  color: #1a56db; /* Adjust this color to match your design */
+  margin-right: 0.5rem;
+}
+
+.watchDemoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a56db; /* Adjust this color to match your design */
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.watchDemoIcon svg {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 768px) {
+  .ctaContainer {
+    flex-direction: column;
+  }
+
+  .tryFreeButton {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+.content, .image {
+  position: relative;
+  z-index: 2;
+}
